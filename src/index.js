@@ -68,7 +68,7 @@ module.exports = function toReadable (number) {
                 return 'nine' + mas_10_15[0];
             }
             else if (number == 20) {
-                return 'twenty' + mas_10_15[0];
+                return 'twenty';
             }
             let x1 = number_as_string[0];
             let x2 = number_as_string[1];
