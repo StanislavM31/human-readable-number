@@ -58,6 +58,8 @@ module.exports = function toReadable (number) {
             return `${mas[numStr[0]]} hundred ${mas[numStr[2]]}`;
         } else if (numStr[2] === "0") {
             return `${mas[numStr[0]]} hundred ${twenty_ninety[numStr[1]]}`;
+        } else if (numStr[1] === "1" && Number(numStr[2]) > 0) {
+            return `${mas[numStr[0]]} hundred ${teen[numStr[2]]}`;
         }
         return `${mas[numStr[0]]} hundred ${twenty_ninety[numStr[1]]} ${
             mas[numStr[2]]
