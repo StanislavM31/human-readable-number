@@ -52,7 +52,12 @@ module.exports = function toReadable (number) {
         }
         return `${twenty_ninety[numStr[0]]} ${mas[numStr[1]]}`;
     } else if (numLeng === 3) {
-        return `${mas[numStr[0]]} hundred`;
+        if (numStr[1] === "0" && numStr[2] === "0") {
+            return `${mas[numStr[0]]} hundred`;
+        }
+        return `${mas[numStr[0]]} hundred ${twenty_ninety[numStr[1]]} ${
+            mas[numStr[2]]
+        }`;
     }
 }
 
